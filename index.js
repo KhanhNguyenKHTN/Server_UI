@@ -66,6 +66,10 @@ var Card = [
     }
 ];
 
+app.get('/test', function(req, res) {
+    res.send("Ok test");
+});
+
 app.get('/card/:id', function(req, res) {
     var index = parseInt(req.params.id, 10);
     res.send(JSON.stringify(Card[index-1]));
